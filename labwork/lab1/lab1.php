@@ -25,9 +25,10 @@
         <a href="https://github.com/oduong1/COSW30">This is my github profile</a>
 
         <?php
-            print'<p><a href=""> This is my PHP paragraph </a></p>';
+            print'<p> This is a little something about me </p>';
+            print'<p> I am a returning LBCC student who likes to learn gain some knowlege on web development. </p>';
             print '<p>This is the link to <a href="https://www.codecademy.com/">codecademy website, 
-            </a>where one can learn many things from web development to computer programming, for free.</p>';
+            </a>where I can learn a few things from web development to computer programming, to help with this class.</p>';
             print'<p><a href="https://www.youtube.com/">YouTube</a> is another source to learn all cool things</p>';
             print'<p>This assignment is really tough for me, as I had troubles with accessing my aws account in class.</p>';
             print'<p>Because of this, I got behind and pushed my work onto a wrong account.</p>'; 
