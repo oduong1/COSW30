@@ -27,7 +27,7 @@
         //successful
         echo '<h1>you logged in successfully!</h1>';
         echo "<p>Email address: $email</p>";
-        echo "<p>Password: $passwod</p>";
+        echo "<p>Password: $password</p>";
     }
     else {
         //display error message
