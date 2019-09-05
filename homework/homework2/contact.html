@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Simple HTML Form</title>
+	<style type="text/css">
+	label {
+		font-weight: bold;
+		color: #300ACC;
+	}
+	</style>
+</head>
+<body>
+<!-- Script 2.1 - form.html -->
+
+<form action="handle_form.php" method="post" target="_blank">
+
+	<fieldset><legend>Enter your information in the form below:</legend>
+
+	<p><label>Name: <input type="text" required name="name" size="20" maxlength="40"></label></p>
+
+	<p><label>Email Address: <input type="email" required name="email" size="40" maxlength="60" ></label></p>
+
+	<p><label>Gender: 
+	<select name = "gender" required>
+		<option value="M">Male</option>
+		<option value="F">Female</option>
+		<option value="P">Prefer Not to Say</option>		
+	</select> </label> </p>
+
+	<p><label>Age:
+	<select name="age" required>
+		<option value="0-29">Under 30</option>
+		<option value="30-60">Between 30 and 60</option>
+		<option value="60+">Over 60</option>
+	</select></label></p>
+	
+	<p>
+	<input type="checkbox" name="int1" value="read"> I like to read<br>
+	<input type="checkbox" name="int2" value="talk"> I like to talk<br>
+	<input type="checkbox" name="int3" value="listen"> I like to listen<br>
+	<input type="checkbox" name="int4" value="debate"> I like to debate<br>
+	<input type="checkbox" name="int6" value="volunteer"> I like to volunteer<br>
+	<input type="checkbox" name="int5" value="travel"> I like to travel<br>
+	</p>
+	
+	<p><label for="number">Contribution</label>
+    	<input type="number" id="number" name="amount" value="0" step="10" min="0" max="10000">
+	</p>
+	
+	<p>
+		<input type="checkbox" name="check" id="signup"
+            value="1" Checked>Please sign me up<br>
+            
+    	<input type="checkbox" name="check" value="2"> 
+            Not checked by default<br>  
+	</p>
+	
+	<p><label>Comments: <textarea name="comments" rows="3" cols="40"></textarea></label></p>
+	
+	
+
+	</fieldset>
+	
+	<!--<form action="/action_page.php"-->
+	<!--oninput="x.value=parseInt(a.value)+parseInt(b.value)">-->
+	<!--  0-->
+	<!--  <input type="range" id="a" name="a" value="0">-->
+	<!--  0 +-->
+	<!--  <input type="number" id="b" name="b" value="0">-->
+	<!--  =-->
+	<!--  <output name="x" for="a b"></output>-->
+	<!--  <br><br>-->
+	<!--  <input type="submit">-->
+	<!--</form>-->
+
+	<p align="center"><input type="submit" name="submit" value="Submit My Information"></p>
+
+</form>
+
+</body>
+</html>
