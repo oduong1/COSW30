@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Simple HTML Form</title>
+	<link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
+	<style type="text/css">
+	body {
+		font-family: 'Gayathri', sans-serif;
+	}
+	label {
+		font-weight: bold;
+		color: #300ACC;
+	}
+	</style>
+</head>
+<body style="background-color:powderblue;">
+
+
+<form action="process_contact.php" method="POST">
+
+	<fieldset>
+		<center><legend><h2>Enter your information in the form below:</h2></legend></center>
+
+	<p><label>Name: <input type="text" required name="name" size="20" maxlength="40"></label></p>
+
+	<p><label>Email Address: <input type="email" placeholder="username@example.com" required
+		name="email" size="40" maxlength="60" ></label></p>
+        <!--title="Please provide the correct e-mail address format"-->
+		
+
+	<p><label>Gender: 
+	<select name = "gender" required>
+		<option value="M">Male</option>
+		<option value="F">Female</option>
+		<option value="P">Other</option>		
+	</select> </label> </p>
+
+	<p><label>Age:
+	<select name="age" required>
+		<option value="0-17">Under 18</option>		
+		<option value="18-29">Between 18 and 30</option>
+		<option value="30-60">Between 30 and 60</option>
+		<option value="60+">Over 60</option>
+	</select></label></p>
+	
+	<p><label>Areas of interest:</br>
+	<input type="checkbox" name="int1" value="sports">Sports<br>
+	<input type="checkbox" name="int2" value="travel">Travel<br>
+	<input type="checkbox" name="int3" value="arts">Arts<br>
+	<input type="checkbox" name="int4" value="politics">Politics<br>
+	<input type="checkbox" name="int6" value="social">Socializing<br>
+	<input type="checkbox" name="int5" value="tech">Technology<br>
+	</label></p>
+	
+	<p><label for="number">Contribution</label>
+    	<input type="number" id="number" name="amount" value="0" step="100" min="0" max="10000">
+	</p>
+
+	<p><label>Comments: <textarea name="comments" rows="3" cols="40"></textarea></label></p>
+	
+	<p>
+		<input type="checkbox" name="check" id="signup"
+            value="1" Checked>Sign me up.<br>
+	</p>
+		
+	
+
+	</fieldset>
+	
+	<!--<form action="/action_page.php"-->
+	<!--oninput="x.value=parseInt(a.value)+parseInt(b.value)">-->
+	<!--  0-->
+	<!--  <input type="range" id="a" name="a" value="0">-->
+	<!--  0 +-->
+	<!--  <input type="number" id="b" name="b" value="0">-->
+	<!--  =-->
+	<!--  <output name="x" for="a b"></output>-->
+	<!--  <br><br>-->
+	<!--  <input type="submit">-->
+	<!--</form>-->
+
+	<p align="center"><input type="submit" name="submit" value="Submit My Information"></p>
+
+</form>
+
+</body>
+</html>
