@@ -30,7 +30,7 @@
 	echo "<h4>Hello, <strong>{$_POST['name']}</strong></h4>";
 	
 		if ($amount > 0) {
-			echo "<h5>Thank you for your contribution of <em>$amount</em>.</h5>";
+			echo "<h5>Thank you for your contribution of $ <em>$amount</em>.</h5>";
 			echo "<p>We will send you an email confirmation at <em>{$_POST['email']}</em>.</p>\n";
 		}	
 		else {
