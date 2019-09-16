@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <div class="page-header"><h1>Trip Cost Calculator</h1></div>
-<form action="calculator.php" method="post">
+<form action="tuition_calculator.php" method="post">
 	<p>Distance (in miles): <input type="number" name="distance" value="<?php if (isset($_POST['distance'])) echo $_POST['distance']; ?>"></p>
 	<p>Ave. Price Per Gallon:
 	<?php
