@@ -6,7 +6,7 @@
 			<link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
 			<style>
 				body {
-					background-color: #fff;
+					background-color: #00ff7f;
 				    font-family: 'Gayathri', sans-serif;         
 				    color: white;                                                                              
 				}
@@ -57,25 +57,88 @@
 		</head>
 
 		<body> 
+		
+
+
 
 		<div id="container">
-			<div id="calculator">
-				<img src="image/lbcc.gif">
-				<form action="tuition_calculator.php" method="post">
+			<img src="image/lbcc.gif">
+			<?php # Script 3.10 - calculator.php #5
+			
+			// Check for form submission:
+			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+				// Minimal form validation:
+				if (isset($_POST['units'], $_POST['residency'], $_POST['csc'], $_POST['parking']) &&
+				 is_numeric($_POST['units']) && is_numeric($_POST['residency']) && is_numeric($_POST['csc']) && is_numeric($_POST['parking']) ) {
+				 	
+	 	
+	 	
+// This section calculates the cost of tuition.
+	
+	$residency = $_POST['residency'];
+	$units = $_POST['units'];	
+	$csc = $_POST['csc'];
+	$parking = $_POST['parking'];
+	$health = 20;
+	$scholarship;
+	$balance;
+	
+
+	if ($residency == 46) {
+		$tuition = $units * 46;
+		$fee = $tuition + $csc + $parking + $health;
+		}
+	else {
+		$tuition = $units * 236;
+		$fee = $tuition + $csc + $parking + $health;
+		}
+	
+	$scholarship = rand(0, $tuition);
+	$balance = $fee - $scholarship;
+	 
+  // End of calculation
+  
+  // Display results
+  
+	echo "<h1>Hello!</h1>";
+	echo "<h4>Based on the information provided, \$$balance is the total amount due.</h4>";
+	echo "<h4>Here is the summary:</h4>";
+	echo '<h4>Tuition Cost: ' . $_POST['units'] . ' unit(s) * $' . $_POST['residency'] . ' = $' . $tuition . '.</h4>';
+	echo "<h4>Student Health Fee: $20 </h4>";
+	echo '<h4>College Services Card: $' . $_POST['csc'] . '.</h4>';
+	echo '<h4>Parking Permit: $' . $_POST['parking'] . '.</h4>';
+	echo "<h4>Scholarship granted: \$$scholarship</h4>";
+	echo "<h4>Balance Due: \$$balance</h4>";
+	
+	 } else { // Invalid submitted values.
+		echo '<div><h1>Error!</h1></div>
+		<p class="text-danger">Please make sure every field is completed.</p>';
+	}
+} // End of main submission IF.	
+?>		
 		
-					<h1>Tuition Calculator</h1>
+		<!-- display form -->
+		
+			<div id="calculator">
+
+				<form action="calculator.php" method="post">
+		
+				<h1>Tuition Calculator</h1>
 					<h4>welcome :)</h4>
 					<h3>Fill out this form to calculate the total cost of tuition</h3>
 					
-					<p>Are you a resident of the state of California? 
+					<p>California Residency Status: 
 						<select name="residency">
+							<option>Choose a status</option>
+							<option value="236">Non-Resident</option>						
 							<option value="46">Resident</option>
-							<option value="236">Non-Resident</option>
 						</select>
 					</p>
 					
 					<p>Number of Units: 
 						<select name="units">
+							<option>Choose one</option>
+							<option value="0">0</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -101,25 +164,28 @@
 					</p>
 					
 					<h4>Mandatory fee:</h4>
-						<p>Student Health Fee of <input type="hidden" name ="healthfee" value="20" />$20</strong> for all registered students</p>
+						<p>Health Fee of <input type="hidden" name ="healthfee" value="20" />$20</strong> is mandatory for all registered students</p>
 					
 					<h4>Optional fees:</h4>
 					
 					<p>College Services Card: 
 						<select name="csc">
+							<option>Choose an option</option>
 							<option value="0">No [$0]</option>
 							<option value="20">Yes [$20.00]</option>
+
 						</select>
 					</p>
 					
 					<p>Parking Permit: 
 						<select name="parking">
-							<option value="0">No [$0]</option>
-							<option value="25">Yes [$25.00]</option>
+							<option>Choose an option</option>
+							<option value="0">No [$0]</option>						
+							<option value="30">Yes [$30.00]</option>
 						</select>
 					</p>
 					                 
-					<button id="submit_button">Submit</button>
+					<button id="submit_button">Calculate!</button>
 			
 				</form>
 			</div>

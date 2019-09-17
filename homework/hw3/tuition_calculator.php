@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <?php # Script 3.10 - calculator.php #5
 // This function creates a radio button.
 // The function takes two arguments: the value and the name.
