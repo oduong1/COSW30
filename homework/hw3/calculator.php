@@ -6,7 +6,7 @@
 			<link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
 			<style>
 				body {
-					background-color: #00ff7f;
+					background-color: #fff;
 				    font-family: 'Gayathri', sans-serif;         
 				    color: white;                                                                              
 				}
@@ -17,7 +17,7 @@
 					margin-right: auto;
 					padding-top: 50px;
 					padding-bottom: 150px;
-					background-color: #f00;
+					background-color: #FF335B;
 				  text-align: center;
 				}
 				
