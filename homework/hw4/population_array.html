@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Population</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+   
+      <table>
+        <caption>Most Populous U.S. Cities</caption>
+        <thead>
+            <tr>
+              <th scope="col">City</th>
+              <th scope="col">Population</th>   
+            </tr>
+        </thead>
+       
+        <tfoot>
+          <tr>
+            <td colspan="3">Data updated July 1, 2017.</td>
+          </tr>  
+        </tfoot>
+     <?php> // Create array
+        <tbody>
+        $population = array [
+            "New York, New York" => 8622698,
+            "Los Angeles, California" => 3999759,
+            "Chicago, Illinois" => 2716450,
+            "Houston, Texas" => 2312717,
+            "Phoenix, Arizona" => 1626078,
+            "Philadelphia, Pennsylvania" => 1580863,
+            "San Antonio, Texas" => 1511946,
+            "San Diego, California" => 950715,
+            "Jacksonville, Florida" => 892062,
+            "San Francisco" => 884363,
+            "Columbus" => 879170,
+            "Fort Worth" => 874168
+        ];
+<!--
+        $pop_split = explode(',', $population);
+
+]
+-->
+//display original list
+echo '<tr><td colspan="2"><b>Population High to Low</br></td></tr>';
+        foreach ($population as $city => $pop) {
+            echo " 
+                <tr>
+                  <td>$city</td>
+                  <td>$pop</td>   
+                </tr>\n";
+            }
+        
+//display list by city  
+ksort($population);
+echo '<tr><td colspan="2"><b>Alphabetical Order by City</br></td></tr>';
+        foreach ($population as $city => $pop) {
+            echo " 
+                <tr>
+                  <td>$city</td>
+                  <td>$pop</td>   
+                </tr>\n";
+            }
+
+        </tbody>
+        ?>
+      </table>
+    
+  </body>
+</html>
