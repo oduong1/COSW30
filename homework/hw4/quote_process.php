@@ -96,7 +96,7 @@ else {
             </p>
  
         </form
-        <a href="http://cosw30-od.herokuapp.com/homework/hw4/population_array.php">Link to Population Array</a>
+
     </container>
  </body>
 </html>
