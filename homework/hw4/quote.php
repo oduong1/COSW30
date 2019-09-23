@@ -5,21 +5,18 @@
         <title>Favorite Quote</title>
             <style>
             #center {
-                font-family: fantasy;
-                display: block;
-                width: 70%;
-                margin: auto;
-            }
-            h2, p {
-                color: coral; 
-                font-size: 1.1 em;
-            }
+            color: coral;
+            font-family: fantasy;
+            display: block;
+            width: 70%;
+            margin: auto;
+        }
     </style>
         
     </head>
     <body>
-        <container id="center">
-<?php
+        
+    <?php
     // look at chapter 2 for arrays
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phrase = $_POST['phrase'];
@@ -29,11 +26,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $word_count = count($words_array);
 
     echo "<p>These are the $word_count words you entered:</p>";
-      echo "<ul>";
+    echo "<ul>";
     foreach($words_array as $key => $value){
         echo"<li>$value</li>";
      }    
-        echo "</ul>";
+    echo "</ul>";
 
     asort($words_array); // sort alphabetically
     
@@ -42,26 +39,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     foreach($words_array as $key => $value){
         echo "<li>$value</li>";
     }
-        echo "</ul>";
+    echo "</ul>";
         
         
     rsort($words_array);
     echo '<p>Here are your words in reverse alphabetical order:</p>';
-     echo "<ul>";
+    echo "<ul>";
     foreach($words_array as $key => $value){
         echo "<li>$value</li>";
     }
-       echo "</ul>";
+    echo "</ul>";
      
     array_push($words_array, "Life", "is", "beautiful!");
 
     $word_count = count($words_array);
-        echo "<p>I added a few words. Here are the $word_count words:</p>";
-     echo "<ul>";
+    echo "<p>I added a few words. Here are the $word_count words:</p>";
+    echo "<ul>";
     foreach($words_array as $key => $value){
         echo "<li>$value</li>";
     }
-       echo "</ul>";
+    echo "</ul>";
        
     // for ($i = 0; $i <3; $i++) {
     //   array_shift($words_array[$i]);  
@@ -71,32 +68,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     array_shift($words_array); 
     
     $word_count = count($words_array);
-        echo "<p>First three words on the previous list are removed. </br>Here are the $word_count words:</p>";
-     echo "<ul>";
+    echo "<p>First three words are removed. Here are the $word_count words:</p>";
+    echo "<ul>";
     foreach($words_array as $key => $value){
         echo "<li>$value</li>";
     }
-       echo "</ul>";
+    echo "</ul>";
 }
 else {
-    	echo '<div><h1>Error!</h1></div>
-		<p class="text-danger">Please make sure every field is completed.</p>';
-	}
-	
-    ?>
-
-
-    <h2>Your Favorite Quote</h2>
-        <form action="quote_process.php" method="POST">
+    
+}
+?>
+    
         
-            <p>Please enter a phrase of 5 or more words - no punctuations:<p>
-            <p>
-                <input type="text" name="phrase" size="50" maxlength="150" required>
-                <input type="submit" name="submit" value="Submit">
-            </p>
+    <div id="center">
+    <h2>Your Favorite Quote</h2>
+        <form action="quote.php" method="POST">
+
+    <h4>Please enter a phrase of 5 or more words:</h4>
+    <p>
+        <input type="text" name="phrase" size="50" maxlength="150">
+        <input type="submit" name="submit" value="Submit">
+    </p>
  
-        </form
-        <a href="http://cosw30-od.herokuapp.com/homework/hw4/population_array.php">Link to Population Array</a>
-    </container>
- </body>
+        </form>
+        </div>
+    </body>
 </html>

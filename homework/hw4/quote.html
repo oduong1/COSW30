@@ -5,12 +5,15 @@
         <title>Favorite Quote</title>
             <style>
             #center {
-            color: coral;
-            font-family: fantasy;
-            display: block;
-            width: 70%;
-            margin: auto;
-        }
+                font-family: fantasy;
+                display: block;
+                width: 70%;
+                margin: auto;
+            }
+            h2, p {
+                color: coral; 
+                font-size: 1.1 em;
+            }
     </style>
         
     </head>
@@ -20,13 +23,14 @@
     <h2>Your Favorite Quote</h2>
         <form action="quote_process.php" method="POST">
 
-    <h4>Please enter a phrase of 5 or more words:</h4>
+        <p>Please enter a phrase of 5 or more words - no punctuations:</p>
     <p>
-        <input type="text" name="phrase" size="50" maxlength="150">
+        <input type="text" name="phrase" size="50" maxlength="150" required>
         <input type="submit" name="submit" value="Submit">
     </p>
  
         </form>
+        <a href="http://cosw30-od.herokuapp.com/homework/hw4/population_array.php">Link to Population Array</a>
     </body>
     
 </html>
