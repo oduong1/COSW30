@@ -19,6 +19,7 @@
     </head>
     <body>
         <container id="center">
+        <a href="http://cosw30-od.herokuapp.com/homework/hw4/population_array.php">Link to Population Array</a>
 <?php
     // look at chapter 2 for arrays
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -94,7 +95,7 @@ else {
                 <input type="text" name="phrase" size="50" maxlength="150" required>
                 <input type="submit" name="submit" value="Submit">
             </p>
- 
+         <a href="http://cosw30-od.herokuapp.com/homework/hw4/population_array.php">Link to Population Array</a>
         </form
 
     </container>
