@@ -5,6 +5,11 @@
     $text = $_POST['text'];
     
     $textExplode = explode(' ', $text); // converts string to array
+    echo "<p>This is what you entered:</p>";
+    foreach($textExplode as $key => $value) {
+        echo "<p>$value</p>";
+        
+    }
     // shuffle($textExplode);
   
 
@@ -12,23 +17,23 @@
     // echo 'Text Explode';
     print_r($textExplode);
     
-    $shuffledText = shuffle($textExplode); //return true or false only
+    $shuffledText = asort($textExplode); //return true or false only
     
-    foreach($textExplode as $key => $value){
+    foreach($shuffledText as $key => $value){
         echo "<p>$key Value: $value</p>";
         
     }
   
-//     echo "<p>If shuffle succeeded, returns 1: " . $shuffledText ."</p>";
-//     // print_r($shuffledText);
+echo "<p>If shuffle succeeded, returns 1: " . $shuffledText ."</p>";
+print_r($shuffledText);
     
     
 //         // use the implode function, to turn array back into a string
-//     $textImplode = implode(' ', $textExplode);
+    $textImplode = implode(' ', $shuffledText);
     
 //     // or output using a foreach loop
     
-//     echo "<p>this is the put-back string: " . $textImplode ."</p>";
+echo "<p>this is the put-back string: " . $textImplode ."</p>";
 //     $numbers = range(1, 20);
 //     shuffle($numbers);
 //     foreach ($numbers as $number) {

@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="table.css">
   </head>
   <body >
+    
+          <a href="http://cosw30-od.herokuapp.com/homework/hw4/quote.html">Link to Favorite Quote</a>
+    <div>
     <container id="center_a"><h1>Major U.S. Cities</h1></container>
 
       <table>
@@ -64,6 +67,7 @@ echo '<tr><td>City</td><td>Population *</td></tr>';
           </tr>  
         </tfoot>
       </table>
-    
+          <a href="http://cosw30-od.herokuapp.com/homework/hw4/quote.html">Link to Favorite Quote</a>
+    </div>
   </body>
 </html>
