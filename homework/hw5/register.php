@@ -77,7 +77,7 @@ remember to include header and footer - thx--Shanen
     <input type="password" id="password" name="password"></br>
     <?php // if password is not entered, display error message
         if(isset($error_p)) {
-            echo "<p>$erro_pr</p>";
+            echo "<p>$error_p</p>";
         }
     ?>
     <label for="conf_password">Confirm Your Password</label>
